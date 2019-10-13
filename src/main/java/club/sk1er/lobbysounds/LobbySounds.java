@@ -112,8 +112,6 @@ public class LobbySounds {
             if (soundName.startsWith("mob.endermen") && Sounds.DISABLE_ENDERMEN_SOUNDS) {
                 setNullResult(event);
             }
-
-            if (event.result != null) System.out.println(soundName);
         }
     }
 
