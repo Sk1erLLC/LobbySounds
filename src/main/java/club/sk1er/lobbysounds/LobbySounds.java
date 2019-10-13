@@ -61,7 +61,7 @@ public class LobbySounds {
                 setNullResult(event);
             }
 
-            if (soundName.startsWith("mob.wither") && Sounds.DISABLE_WITHER_SOUNDS) {
+            if ((soundName.startsWith("mob.wither") || soundName.startsWith("mob.skeleton")) && Sounds.DISABLE_WITHER_SOUNDS) {
                 setNullResult(event);
             }
 
