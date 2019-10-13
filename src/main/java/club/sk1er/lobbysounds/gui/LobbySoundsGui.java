@@ -18,12 +18,13 @@ public class LobbySoundsGui extends AbstractScreen {
         createButton(5, 5, 3, getSuffix(Sounds.DISABLE_TNT_PRIME_SOUNDS, "Tnt Prime Sounds"));
         createButton(6, 155, 4, getSuffix(Sounds.DISABLE_EXPLOSION_SOUNDS, "Explosion Sounds"));
         createButton(7, 5, 4, getSuffix(Sounds.DISABLE_DELIVERY_MAN_SOUNDS, "Delivery Man Sounds"));
-        createButton(8, 155, 5, getSuffix(Sounds.DISABLE_MYSTERY_BOX_NOTES, "Mystery Box Sounds"));
+        createButton(8, 155, 5, getSuffix(Sounds.DISABLE_NOTE_SOUNDS, "Note Sounds"));
         createButton(9, 5, 5, getSuffix(Sounds.DISABLE_FIREWORKS_SOUNDS, "Fireworks Sounds"));
         createButton(10, 155, 6, getSuffix(Sounds.DISABLE_LEVELUP_SOUNDS, "Levelup Sounds"));
         createButton(11, 5, 6, getSuffix(Sounds.DISABLE_STEP_SOUNDS, "Step Sounds"));
         createButton(12, 155, 7, getSuffix(Sounds.DISABLE_ARROW_SOUNDS, "Arrow Sounds"));
         createButton(13, 5, 7, getSuffix(Sounds.DISABLE_BAT_SOUNDS, "Bat Sounds"));
+        createButton(14, 155, 8, getSuffix(Sounds.DISABLE_FIRE_SOUNDS, "Fire Sounds"));
     }
 
     @Override
@@ -62,8 +63,8 @@ public class LobbySoundsGui extends AbstractScreen {
                 button.displayString = getSuffix(Sounds.DISABLE_DELIVERY_MAN_SOUNDS, "Delivery Man Sounds");
                 break;
             case 8:
-                Sounds.DISABLE_MYSTERY_BOX_NOTES = !Sounds.DISABLE_MYSTERY_BOX_NOTES;
-                button.displayString = getSuffix(Sounds.DISABLE_MYSTERY_BOX_NOTES, "Mystery Box Sounds");
+                Sounds.DISABLE_NOTE_SOUNDS = !Sounds.DISABLE_NOTE_SOUNDS;
+                button.displayString = getSuffix(Sounds.DISABLE_NOTE_SOUNDS, "Note Sounds");
                 break;
             case 9:
                 Sounds.DISABLE_FIREWORKS_SOUNDS = !Sounds.DISABLE_FIREWORKS_SOUNDS;
@@ -84,6 +85,10 @@ public class LobbySoundsGui extends AbstractScreen {
             case 13:
                 Sounds.DISABLE_BAT_SOUNDS = !Sounds.DISABLE_BAT_SOUNDS;
                 button.displayString = getSuffix(Sounds.DISABLE_BAT_SOUNDS, "Bat Sounds");
+                break;
+            case 14:
+                Sounds.DISABLE_FIRE_SOUNDS = !Sounds.DISABLE_FIRE_SOUNDS;
+                button.displayString = getSuffix(Sounds.DISABLE_FIRE_SOUNDS, "Fire Sounds");
                 break;
         }
     }

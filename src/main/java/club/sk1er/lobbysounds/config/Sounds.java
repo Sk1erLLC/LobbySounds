@@ -17,12 +17,13 @@ public class Sounds {
     public static boolean DISABLE_TNT_PRIME_SOUNDS;
     public static boolean DISABLE_EXPLOSION_SOUNDS;
     public static boolean DISABLE_DELIVERY_MAN_SOUNDS;
-    public static boolean DISABLE_MYSTERY_BOX_NOTES;
+    public static boolean DISABLE_NOTE_SOUNDS;
     public static boolean DISABLE_FIREWORKS_SOUNDS;
     public static boolean DISABLE_LEVELUP_SOUNDS;
     public static boolean DISABLE_STEP_SOUNDS;
     public static boolean DISABLE_ARROW_SOUNDS;
     public static boolean DISABLE_BAT_SOUNDS;
+    public static boolean DISABLE_FIRE_SOUNDS;
 
     public static void loadConfig() {
         try {
@@ -35,12 +36,13 @@ public class Sounds {
             if (object.has("disableTntPrimeSounds")) DISABLE_TNT_PRIME_SOUNDS = object.get("disableTntPrimeSounds").getAsBoolean();
             if (object.has("disableExplosionSounds")) DISABLE_EXPLOSION_SOUNDS = object.get("disableExplosionSounds").getAsBoolean();
             if (object.has("disableDeliveryManSounds")) DISABLE_DELIVERY_MAN_SOUNDS = object.get("disableDeliveryManSounds").getAsBoolean();
-            if (object.has("disableMysteryBoxNotes")) DISABLE_MYSTERY_BOX_NOTES = object.get("disableMysteryBoxNotes").getAsBoolean();
+            if (object.has("disableNoteSounds")) DISABLE_NOTE_SOUNDS = object.get("disableNoteSounds").getAsBoolean();
             if (object.has("disableFireworksSounds")) DISABLE_FIREWORKS_SOUNDS = object.get("disableFireworksSounds").getAsBoolean();
             if (object.has("disableLevelupSounds")) DISABLE_LEVELUP_SOUNDS = object.get("disableLevelupSounds").getAsBoolean();
             if (object.has("disableStepSounds")) DISABLE_STEP_SOUNDS = object.get("disableStepSounds").getAsBoolean();
             if (object.has("disableArrowSounds")) DISABLE_ARROW_SOUNDS = object.get("disableArrowSounds").getAsBoolean();
             if (object.has("disableBatSounds")) DISABLE_BAT_SOUNDS = object.get("disableBatSounds").getAsBoolean();
+            if (object.has("disableFireSounds")) DISABLE_FIRE_SOUNDS = object.get("disableFireSounds").getAsBoolean();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -57,12 +59,13 @@ public class Sounds {
             object.addProperty("disableTntPrimeSounds", DISABLE_TNT_PRIME_SOUNDS);
             object.addProperty("disableExplosionSounds", DISABLE_EXPLOSION_SOUNDS);
             object.addProperty("disableDeliveryManSounds", DISABLE_DELIVERY_MAN_SOUNDS);
-            object.addProperty("disableMysteryBoxNotes", DISABLE_MYSTERY_BOX_NOTES);
+            object.addProperty("disableNoteSounds", DISABLE_NOTE_SOUNDS);
             object.addProperty("disableFireworksSounds", DISABLE_FIREWORKS_SOUNDS);
             object.addProperty("disableLevelupSounds", DISABLE_LEVELUP_SOUNDS);
             object.addProperty("disableStepSounds", DISABLE_STEP_SOUNDS);
             object.addProperty("disableArrowSounds", DISABLE_ARROW_SOUNDS);
             object.addProperty("disableBatSounds", DISABLE_BAT_SOUNDS);
+            object.addProperty("disableFireSounds", DISABLE_FIRE_SOUNDS);
             FileUtils.writeStringToFile(LobbySounds.instance.getConfigFile(), object.toString());
         } catch (IOException e) {
             e.printStackTrace();

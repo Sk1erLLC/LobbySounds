@@ -52,7 +52,7 @@ public class LobbySounds {
     public void soundPlay(PlaySoundEvent event) {
         final String soundName = event.name;
 
-        if (onHypixel && inHypixelLobby) {
+//        if (onHypixel && inHypixelLobby) {
             if (soundName.startsWith("mob.slime") && Sounds.DISABLE_SLIME_SOUNDS) {
                 setNullResult(event);
             }
@@ -85,8 +85,7 @@ public class LobbySounds {
                 setNullResult(event);
             }
 
-            if ((soundName.equals("note.bassattack") || soundName.equals("note.hat") ||
-                    soundName.equals("note.harp") || soundName.equals("note.snare") || soundName.equals("note.pling")) && Sounds.DISABLE_MYSTERY_BOX_NOTES) {
+            if (soundName.startsWith("note.") && Sounds.DISABLE_NOTE_SOUNDS) {
                 setNullResult(event);
             }
 
@@ -106,14 +105,19 @@ public class LobbySounds {
                 setNullResult(event);
             }
 
+            if (soundName.equals("fire.fire") && Sounds.DISABLE_FIRE_SOUNDS) {
+                setNullResult(event);
+            }
+
             if (event.result != null) System.out.println(soundName);
-        }
+//        }
     }
 
     private void setNullResult(PlaySoundEvent event) {
         event.result = null;
     }
 
+    // lobby checker taken from LobbyGlow by biscut
     private void runLobbyCheckerTimer() {
         Minecraft mc = Minecraft.getMinecraft();
         new Timer().scheduleAtFixedRate(new TimerTask() {

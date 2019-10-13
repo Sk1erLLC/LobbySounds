@@ -6,6 +6,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 
+import java.util.Collections;
+import java.util.List;
+
 public class LobbySoundsCommand extends CommandBase {
     @Override
     public String getCommandName() {
@@ -25,5 +28,10 @@ public class LobbySoundsCommand extends CommandBase {
     @Override
     public int getRequiredPermissionLevel() {
         return -1;
+    }
+
+    @Override
+    public List<String> getCommandAliases() {
+        return Collections.singletonList("sounds");
     }
 }
