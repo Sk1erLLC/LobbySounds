@@ -24,6 +24,7 @@ public class Sounds {
     public static boolean DISABLE_ARROW_SOUNDS;
     public static boolean DISABLE_BAT_SOUNDS;
     public static boolean DISABLE_FIRE_SOUNDS;
+    public static boolean DISABLE_ENDERMEN_SOUNDS;
 
     public static void loadConfig() {
         try {
@@ -43,6 +44,7 @@ public class Sounds {
             if (object.has("disableArrowSounds")) DISABLE_ARROW_SOUNDS = object.get("disableArrowSounds").getAsBoolean();
             if (object.has("disableBatSounds")) DISABLE_BAT_SOUNDS = object.get("disableBatSounds").getAsBoolean();
             if (object.has("disableFireSounds")) DISABLE_FIRE_SOUNDS = object.get("disableFireSounds").getAsBoolean();
+            if (object.has("disableEndermenSounds")) DISABLE_ENDERMEN_SOUNDS = object.get("disableEndermenSounds").getAsBoolean();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -66,6 +68,7 @@ public class Sounds {
             object.addProperty("disableArrowSounds", DISABLE_ARROW_SOUNDS);
             object.addProperty("disableBatSounds", DISABLE_BAT_SOUNDS);
             object.addProperty("disableFireSounds", DISABLE_FIRE_SOUNDS);
+            object.addProperty("disableEndermenSounds", DISABLE_ENDERMEN_SOUNDS);
             FileUtils.writeStringToFile(LobbySounds.instance.getConfigFile(), object.toString());
         } catch (IOException e) {
             e.printStackTrace();

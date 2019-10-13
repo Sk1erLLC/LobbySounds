@@ -52,7 +52,7 @@ public class LobbySounds {
     public void soundPlay(PlaySoundEvent event) {
         final String soundName = event.name;
 
-//        if (onHypixel && inHypixelLobby) {
+        if (onHypixel && inHypixelLobby) {
             if (soundName.startsWith("mob.slime") && Sounds.DISABLE_SLIME_SOUNDS) {
                 setNullResult(event);
             }
@@ -109,8 +109,12 @@ public class LobbySounds {
                 setNullResult(event);
             }
 
+            if (soundName.startsWith("mob.endermen") && Sounds.DISABLE_ENDERMEN_SOUNDS) {
+                setNullResult(event);
+            }
+
             if (event.result != null) System.out.println(soundName);
-//        }
+        }
     }
 
     private void setNullResult(PlaySoundEvent event) {
