@@ -85,7 +85,7 @@ public class LobbySounds {
                 setNullResult(event);
             }
 
-            if (soundName.startsWith("note.") && Sounds.DISABLE_NOTE_SOUNDS) {
+            if ((soundName.startsWith("note.") || soundName.equals("random.click") ) && Sounds.DISABLE_NOTE_SOUNDS) {
                 setNullResult(event);
             }
 
@@ -111,6 +111,10 @@ public class LobbySounds {
 
             if (soundName.startsWith("mob.endermen") && Sounds.DISABLE_ENDERMEN_SOUNDS) {
                 setNullResult(event);
+            }
+
+            if (event.result != null) {
+                System.out.println(event.name);
             }
         }
     }
