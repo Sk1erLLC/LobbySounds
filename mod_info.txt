@@ -1,3 +1,1 @@
-<br>
 <p>LobbySounds allows you to remove commonly annoying sounds in the Hypixel lobby.</p>
-<br>
