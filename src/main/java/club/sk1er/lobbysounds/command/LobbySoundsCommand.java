@@ -1,37 +1,36 @@
 package club.sk1er.lobbysounds.command;
 
-import club.sk1er.lobbysounds.gui.LobbySoundsGui;
-import club.sk1er.lobbysounds.util.TickScheduler;
-import net.minecraft.client.Minecraft;
+import club.sk1er.lobbysounds.LobbySounds;
+import club.sk1er.mods.core.ModCore;
+import java.util.Collections;
+import java.util.List;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 
-import java.util.Collections;
-import java.util.List;
-
 public class LobbySoundsCommand extends CommandBase {
-    @Override
-    public String getCommandName() {
-        return "lobbysounds";
-    }
 
-    @Override
-    public String getCommandUsage(ICommandSender sender) {
-        return "/lobbysounds";
-    }
+  @Override
+  public String getCommandName() {
+    return "lobbysounds";
+  }
 
-    @Override
-    public void processCommand(ICommandSender sender, String[] args) {
-        TickScheduler.INSTANCE.schedule(0, () -> Minecraft.getMinecraft().displayGuiScreen(new LobbySoundsGui()));
-    }
+  @Override
+  public String getCommandUsage(ICommandSender sender) {
+    return "/lobbysounds";
+  }
 
-    @Override
-    public int getRequiredPermissionLevel() {
-        return -1;
-    }
+  @Override
+  public void processCommand(ICommandSender sender, String[] args) {
+    ModCore.getInstance().getGuiHandler().open(LobbySounds.instance.getSounds().gui());
+  }
 
-    @Override
-    public List<String> getCommandAliases() {
-        return Collections.singletonList("sounds");
-    }
+  @Override
+  public int getRequiredPermissionLevel() {
+    return -1;
+  }
+
+  @Override
+  public List<String> getCommandAliases() {
+    return Collections.singletonList("sounds");
+  }
 }
