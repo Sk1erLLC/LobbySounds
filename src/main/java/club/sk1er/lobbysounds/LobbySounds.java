@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = "lobby_sounds", name = "Lobby Sounds", version = "1.2")
+@Mod(modid = "lobby_sounds", name = "Lobby Sounds", version = "1.3")
 public class LobbySounds {
 
   private static final String COMPASS_NAME =

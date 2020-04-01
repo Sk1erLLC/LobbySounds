@@ -153,5 +153,6 @@ public class Sounds extends Vigilant {
 
   public Sounds() {
     super(new File("./config/lobbysounds.toml"));
+    initialize();
   }
 }
