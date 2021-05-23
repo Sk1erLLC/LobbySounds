@@ -2,7 +2,7 @@
   {
     "modid": "lobby_sounds",
     "name": "Lobby Sounds",
-    "description": "Remove commonly annoying Hypixel Lobby sound effects",
+    "description": "Remove commonly annoying Hypixel Lobby sound effects.",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
