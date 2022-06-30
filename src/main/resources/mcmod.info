@@ -4,7 +4,7 @@
     "name": "Lobby Sounds",
     "description": "Remove commonly annoying Hypixel Lobby sound effects.",
     "version": "${version}",
-    "mcversion": "${mcversion}",
+    "mcversion": "${mcVersionStr}",
     "url": "",
     "updateUrl": "",
     "authorList": [
